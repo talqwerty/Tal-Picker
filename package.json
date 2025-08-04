@@ -1,6 +1,6 @@
 {
   "name": "@kananon/thai-datepicker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Thai Buddhist Calendar DatePicker for Vue 3",
   "main": "./dist/thai-datepicker.umd.js",
   "module": "./dist/thai-datepicker.es.js",
