@@ -4,15 +4,11 @@ const ThaiDatePickerPlugin = {
   install(app) {
     app.component('ThaiDatePicker', ThaiDatePicker)
     app.component('thai-date-picker', ThaiDatePicker) // kebab-case สำหรับ HTML
-  }
+  },
+  ThaiDatePicker
 }
 
 export default ThaiDatePickerPlugin
 
+// Export the component separately for individual import
 export { ThaiDatePicker }
-
-if (typeof window !== 'undefined' && window.Vue) {
-  if (window.Vue.createApp) {
-    window.ThaiDatePicker = ThaiDatePickerPlugin
-  }
-}
