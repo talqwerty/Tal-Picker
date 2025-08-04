@@ -1,13 +1,28 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Vue</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./dist/thai-datepicker.umd.js"></script>
+    <link rel="stylesheet" href="./dist/thai-datepicker.css">
+</head>
+<body>
+    <div id="app">
+        <thai-date-picker v-model="date"></thai-date-picker>
+        <p>Selected: {{ date }}</p>
+    </div>
+    
+    <script>
+        console.log('ThaiDatePicker:', ThaiDatePicker)
+        console.log('ThaiDatePicker.default:', ThaiDatePicker.default)
+        
+        const { createApp, ref } = Vue
+        
+        createApp({
+            setup() {
+                const date = ref('')
+                return { date }
+            }
+        }).use(ThaiDatePicker.default).mount('#app') // ใช้ .default
+    </script>
+</body>
 </html>
