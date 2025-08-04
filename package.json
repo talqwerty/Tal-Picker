@@ -1,0 +1,44 @@
+{
+  "name": "thai-datepicker",
+  "version": "1.0.0",
+  "description": "Thai Buddhist Calendar DatePicker for Vue 3",
+  "main": "./dist/thai-datepicker.umd.js",
+  "module": "./dist/thai-datepicker.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/thai-datepicker.es.js",
+      "require": "./dist/thai-datepicker.umd.js"
+    },
+    "./dist/style.css": "./dist/thai-datepicker.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.0.0",
+    "vue": "^3.0.0"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "datepicker",
+    "thai",
+    "buddhist-calendar",
+    "component"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/thai-datepicker"
+  }
+}
