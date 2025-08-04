@@ -17,7 +17,7 @@ Vue 3 DatePicker component with Thai Buddhist calendar support.
 ## Installation
 
 ```bash
-npm install thai-datepicker
+npm i @kananon/thai-datepicker
 ```
 
 ## Usage
@@ -26,8 +26,8 @@ npm install thai-datepicker
 
 ```vue
 <script setup>
-import { ThaiDatePicker } from 'thai-datepicker'
-import 'thai-datepicker/dist/thai-datepicker.css'
+import { ThaiDatePicker } from '@kananon/thai-datepicker'
+import '@kananon/thai-datepicker/dist/thai-datepicker.css'
 import { ref } from 'vue'
 
 const selectedDate = ref('')
@@ -38,6 +38,7 @@ const selectedDate = ref('')
     v-model="selectedDate" 
     placeholder="เลือกวันที่"
   />
+  <input type="hidden" v-model="selectedDate"> <!-- ค่าที่ส่งไปยัง server -->
 </template>
 ```
 
