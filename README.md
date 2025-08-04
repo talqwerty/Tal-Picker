@@ -1,6 +1,8 @@
 # Thai DatePicker
 
 Vue 3 DatePicker component with Thai Buddhist calendar support.
+# Image Example
+![Image](https://github.com/talqwerty/Tal-Picker/blob/main/src/assets/example.png)
 
 ## Features
 
