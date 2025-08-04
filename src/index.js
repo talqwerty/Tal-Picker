@@ -1,16 +1,18 @@
 import ThaiDatePicker from './components/ThaiDatePicker.vue'
 
-// Export เป็น plugin
-export default {
+const ThaiDatePickerPlugin = {
   install(app) {
     app.component('ThaiDatePicker', ThaiDatePicker)
+    app.component('thai-date-picker', ThaiDatePicker) // kebab-case สำหรับ HTML
   }
 }
 
-// Export component แยก
+export default ThaiDatePickerPlugin
+
 export { ThaiDatePicker }
 
-// Auto-install ถ้าใช้ script tag
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.createApp({}).use(ThaiDatePicker)
+  if (window.Vue.createApp) {
+    window.ThaiDatePicker = ThaiDatePickerPlugin
+  }
 }
